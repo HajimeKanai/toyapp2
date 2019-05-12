@@ -1,0 +1,9 @@
+<h1>投稿する</h1>
+<%= form_tag("/posts/create") do %>
+    <p>Content</p>
+    <textarea name="content" rows="10" cols="60">ここに自由にコメントしよう！<%= @post.content %></textarea>
+    <p>Userのid</p>
+    <input type="text" name="user_id">
+    <%= @post.user_id %>
+    <input type="submit" value="投稿">
+<% end %>

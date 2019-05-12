@@ -1,0 +1,21 @@
+<p>
+<strong>User Name: </strong>
+<%= @user.name %>
+</p>
+<p>
+<strong>User Email: </strong>
+<%= @user.email %>
+</p>
+<p>
+<strong>User id: </strong>
+<%= @user.id %>
+</p>
+<p>
+  <strong>最近の投稿:</strong>
+  <% if @user.posts.first %>
+  <%= @user.posts.first.content %>
+  <% end %>
+</p>
+
+<%= link_to("ユーザー編集", "/users/#{@user.id}/edit") %>
+<%= link_to("ユーザー削除", "/users/#{@user.id}/destroy", {method: "user"}) %>

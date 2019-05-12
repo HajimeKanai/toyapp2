@@ -1,0 +1,8 @@
+<h1>ユーザーの編集</h1>
+<%= form_tag("/users/#{@user.id}/update") do %>
+    <p>name</p>
+    <input name="name" value="<%= @user.name %>">
+    <p>email</p>
+    <input name="email" value="<%= @user.email %>">
+    <input type="submit" value="更新">
+<% end %>
